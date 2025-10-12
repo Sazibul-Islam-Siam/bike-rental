@@ -37,3 +37,37 @@ li {
   padding: 10px;
   border-radius: 5px;
 }
+.booking-form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  margin-bottom: 5px;
+}
+
+.booking-form input {
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.booking-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: #45a049;
+}
