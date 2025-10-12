@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css'; // We'll style this later
+import './App.css';
+import BikeList from './components/BikeList';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <p>Find the perfect bike for your ride!</p>
         <button onClick={() => alert('Go to bike rentals')}>Browse Bikes</button>
       </header>
+      <BikeList />
     </div>
   );
 }
