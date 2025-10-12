@@ -1,22 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // We'll style this later
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to the Bike Rental Service</h1>
+        <p>Find the perfect bike for your ride!</p>
+        <button onClick={() => alert('Go to bike rentals')}>Browse Bikes</button>
       </header>
     </div>
   );
