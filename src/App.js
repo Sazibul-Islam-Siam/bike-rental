@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import ClientReviews from './components/ClientReviews';
+import Footer from './components/Footer';
 import BikeList from './components/BikeList';
 import PaymentPage from './components/PaymentPage';
 import SignupForm from './components/SignupForm';
@@ -60,6 +61,7 @@ function App() {
           <HeroSection />
           <WhyChooseUs />
           <ClientReviews />
+          <Footer />
         </>
       )}
     </div>
