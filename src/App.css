@@ -1,25 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Auth Container Styles */
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-wrapper {
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-5px);
+}
+
+/* Bikes Section */
+.bikes-section {
+  background: #f8f9fa;
+  padding: 80px 40px;
+}
+
+.section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-header {
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
+.section-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1e3c72;
+  margin-bottom: 15px;
 }
 
+.section-header p {
+  font-size: 18px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Legacy button styles */
 button {
-  margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
+  font-weight: 600;
   border: none;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 h2 {
@@ -70,4 +135,25 @@ li {
 
 .booking-form button:hover {
   background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .bikes-section {
+    padding: 60px 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 32px;
+  }
+  
+  .section-header p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 28px;
+  }
 }

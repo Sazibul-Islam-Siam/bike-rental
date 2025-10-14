@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
 import BikeList from './components/BikeList';
 import PaymentPage from './components/PaymentPage';
 import SignupForm from './components/SignupForm';
@@ -39,36 +41,39 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to the Bike Rental Service</h1>
-        <p>Find the perfect bike for your ride!</p>
-        <div style={{ marginBottom: '20px' }}>
-          {user ? (
-            <button onClick={handleLogout}>Logout</button>
-          ) : (
-            <button onClick={() => setShowAuth(!showAuth)}>
-              {showAuth ? 'Back to Home' : 'Login / Signup'}
+      <Navbar />
+      
+      {showAuth && !user ? (
+        <div className="auth-container">
+          <div className="auth-wrapper">
+            <button className="back-btn" onClick={() => setShowAuth(false)}>
+              ← Back to Home
             </button>
-          )}
-        </div>
-        {showAuth && !user ? (
-          <div>
             <SignupForm onSignupSuccess={handleSignupSuccess} />
             <LoginForm onLoginSuccess={handleLoginSuccess} />
           </div>
-        ) : (
-          <div>
-            <BikeList onBooking={handleBooking} />
-            {bookingDetails && (
-              <PaymentPage
-                bike={bookingDetails.bike}
-                duration={bookingDetails.duration}
-                onPaymentSuccess={handlePaymentSuccess}
-              />
-            )}
-          </div>
-        )}
-      </header>
+        </div>
+      ) : (
+        <>
+          <HeroSection />
+          <section id="bikes" className="bikes-section">
+            <div className="section-container">
+              <div className="section-header">
+                <h2>Our Premium Fleet</h2>
+                <p>Choose from our wide selection of high-quality bikes</p>
+              </div>
+              <BikeList onBooking={handleBooking} />
+              {bookingDetails && (
+                <PaymentPage
+                  bike={bookingDetails.bike}
+                  duration={bookingDetails.duration}
+                  onPaymentSuccess={handlePaymentSuccess}
+                />
+              )}
+            </div>
+          </section>
+        </>
+      )}
     </div>
   );
 }
