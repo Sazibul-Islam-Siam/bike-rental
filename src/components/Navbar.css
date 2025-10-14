@@ -35,7 +35,6 @@
   list-style: none;
   gap: 35px;
   margin: 0;
-  margin-left: 60px;
   padding: 0;
   align-items: center;
 }
@@ -131,13 +130,47 @@
   padding-left: 30px;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-register-btn {
+  background: transparent;
+  color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.login-register-btn:hover {
+  background: #2c2c2c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(44, 44, 44, 0.2);
+}
+
+.user-icon {
+  font-size: 18px;
+}
+
 .call-now-btn {
   background: #C8102E;
   color: white;
   border: none;
-  padding: 14px 35px;
+  padding: 12px 30px;
   border-radius: 50px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -156,7 +189,7 @@
 }
 
 .phone-icon {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 @keyframes fadeIn {
@@ -175,10 +208,37 @@
   .nav-link {
     font-size: 14px;
   }
+  
+  .login-register-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .call-now-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 968px) {
   .navbar-container {
     padding: 15px 20px;
+  }
+  
+  .nav-actions {
+    gap: 10px;
+  }
+  
+  .login-register-btn span,
+  .call-now-btn span {
+    display: none;
+  }
+  
+  .login-register-btn::after {
+    content: 'Login';
+  }
+  
+  .call-now-btn::after {
+    content: 'Call';
   }
 }

@@ -33,13 +33,12 @@ function Navbar() {
             )}
           </li>
           <li><a href="#about" className="nav-link">About Us</a></li>
-          <li><a href="#blog" className="nav-link">Blog</a></li>
-          <li><a href="#contact" className="nav-link">Contact Us</a></li>
+          <li>
+            <button className="login-register-btn">
+              <span className="user-icon">👤</span> Login/Register
+            </button>
+          </li>
         </ul>
-
-        <button className="call-now-btn">
-          <span className="phone-icon">📞</span> Call Now
-        </button>
       </div>
     </nav>
   );
