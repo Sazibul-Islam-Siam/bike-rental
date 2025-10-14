@@ -1,0 +1,787 @@
+/* Bike Details Page Styles */
+
+.bike-details-page {
+  width: 100%;
+  padding-top: 30px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  max-width: 1400px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.breadcrumb span:hover {
+  color: #C8102E;
+}
+
+/* Main Container */
+.details-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+/* Image Section */
+.image-section {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.main-image {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(135deg, #0f2474 0%, #2557b8 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200px;
+  margin-bottom: 20px;
+}
+
+.image-thumbnails {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.thumbnail {
+  width: calc(33.33% - 10px);
+  height: 120px;
+  background: linear-gradient(135deg, #0f2474 0%, #2557b8 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: #C8102E;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #C8102E;
+}
+
+.image-note {
+  text-align: center;
+  padding: 15px;
+  background: #f0f9ff;
+  border-radius: 10px;
+}
+
+.image-note p {
+  margin: 0;
+  color: #0f2474;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Info Section */
+.info-section {
+  padding: 20px 0;
+}
+
+.bike-header h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  color: #1a1a1a;
+}
+
+.bike-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.brand-badge {
+  padding: 8px 18px;
+  background: #0f2474;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.rating-row .stars {
+  color: #fbbf24;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.rating-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.reviews-count {
+  color: #666;
+  font-size: 15px;
+}
+
+/* Version Selector */
+.version-selector {
+  margin-bottom: 30px;
+}
+
+.version-selector h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.version-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.version-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.version-btn:hover {
+  border-color: #C8102E;
+  background: #fff5f7;
+}
+
+.version-btn.active {
+  border-color: #C8102E;
+  background: #fff5f7;
+  box-shadow: 0 4px 15px rgba(200, 16, 46, 0.15);
+}
+
+.version-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.version-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #C8102E;
+}
+
+/* Price Section */
+.price-section {
+  background: linear-gradient(135deg, #0f2474 0%, #2557b8 100%);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.price-value {
+  font-size: 42px;
+  font-weight: 800;
+  color: #22c55e;
+}
+
+.price-unit {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.price-breakdown {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.price-breakdown p {
+  margin: 5px 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* Description Section */
+.description-section {
+  margin-bottom: 30px;
+}
+
+.description-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.description-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Features Section */
+.features-section {
+  margin-bottom: 30px;
+}
+
+.features-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.feature-item {
+  padding: 12px 15px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #0f2474;
+  font-weight: 600;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.book-now-btn {
+  flex: 2;
+  padding: 18px;
+  background: #C8102E;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.book-now-btn:hover {
+  background: #a50d25;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 16, 46, 0.3);
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 18px;
+  background: transparent;
+  color: #C8102E;
+  border: 2px solid #C8102E;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.contact-btn:hover {
+  background: #C8102E;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Compare Section */
+.compare-section {
+  border-top: 2px solid #f0f0f0;
+  padding-top: 25px;
+}
+
+.compare-toggle-btn {
+  width: 100%;
+  padding: 15px;
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.compare-toggle-btn:hover {
+  background: #0f2474;
+  color: white;
+  border-color: #0f2474;
+}
+
+/* Specifications */
+.specs-section {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.specs-section h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.spec-item {
+  text-align: center;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  background: #fff5f7;
+  transform: translateY(-5px);
+}
+
+.spec-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.spec-label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.spec-value {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #C8102E;
+}
+
+/* Comparison Section */
+.comparison-section {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.comparison-section h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.compare-instruction {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.compare-selector {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.compare-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.compare-checkbox:hover {
+  background: #fff5f7;
+}
+
+.compare-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.compare-checkbox span {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.comparison-table {
+  overflow-x: auto;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 18px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.comparison-table th {
+  background: #0f2474;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.comparison-table td {
+  font-size: 15px;
+  color: #555;
+}
+
+.comparison-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.compare-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.compare-features li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.compare-features li::before {
+  content: '✓ ';
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Reviews Section */
+.reviews-section {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.reviews-section h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.reviews-summary {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.summary-score {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #0f2474 0%, #2557b8 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.score-number {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #22c55e;
+}
+
+.score-stars {
+  font-size: 24px;
+  color: #fbbf24;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.score-text {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.rating-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.rating-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating-bar span:first-child {
+  width: 40px;
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+.rating-bar .bar {
+  flex: 1;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.rating-bar .fill {
+  height: 100%;
+  background: #fbbf24;
+  transition: width 0.5s ease;
+}
+
+.rating-bar span:last-child {
+  width: 50px;
+  text-align: right;
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  background: #fff5f7;
+  transform: translateX(5px);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reviewer-avatar {
+  width: 50px;
+  height: 50px;
+  background: #0f2474;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.reviewer-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #999;
+}
+
+.review-rating {
+  color: #fbbf24;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.review-comment {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* Error Page */
+.error-page {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.error-page h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.error-page button {
+  padding: 15px 40px;
+  background: #C8102E;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error-page button:hover {
+  background: #a50d25;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .image-section {
+    position: static;
+  }
+
+  .reviews-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-image {
+    height: 300px;
+    font-size: 120px;
+  }
+
+  .thumbnail {
+    height: 80px;
+    font-size: 35px;
+  }
+
+  .bike-header h1 {
+    font-size: 28px;
+  }
+
+  .price-value {
+    font-size: 32px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .comparison-table {
+    font-size: 13px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px 8px;
+  }
+}

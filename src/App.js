@@ -7,6 +7,8 @@ import WhyChooseUs from './components/WhyChooseUs';
 import ClientReviews from './components/ClientReviews';
 import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
+import SportsBikes from './components/SportsBikes';
+import BikeDetails from './components/BikeDetails';
 import BikeList from './components/BikeList';
 import PaymentPage from './components/PaymentPage';
 import SignupForm from './components/SignupForm';
@@ -70,6 +72,8 @@ function App() {
             )
           } />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/sports-bikes" element={<SportsBikes />} />
+          <Route path="/sports-bikes/:id" element={<BikeDetails />} />
         </Routes>
         
         <Footer />
