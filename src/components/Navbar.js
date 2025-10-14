@@ -1,30 +1,39 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
   const [showRentDropdown, setShowRentDropdown] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <h2>BikeRental<span className="logo-highlight">BD</span></h2>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <h2>BikeRental<span className="logo-highlight">BD</span></h2>
+          </Link>
         </div>
         
         <ul className="navbar-menu">
-          <li><a href="#home" className="nav-link active">Home</a></li>
+          <li><Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link></li>
           <li><a href="#services" className="nav-link">Services</a></li>
           <li><a href="#photos" className="nav-link">Rental Bike Photos</a></li>
-          <li 
-            className="nav-dropdown"
-            onMouseEnter={() => setShowRentDropdown(true)}
-            onMouseLeave={() => setShowRentDropdown(false)}
-          >
-            <a href="#rent" className="nav-link">
+          <li className="nav-dropdown">
+            <a 
+              href="#rent" 
+              className="nav-link"
+              onMouseEnter={() => setShowRentDropdown(true)}
+              onFocus={() => setShowRentDropdown(true)}
+            >
               Rent a Bike <span className="dropdown-arrow">▼</span>
             </a>
             {showRentDropdown && (
-              <ul className="dropdown-menu">
+              <ul 
+                className="dropdown-menu"
+                onMouseEnter={() => setShowRentDropdown(true)}
+                onMouseLeave={() => setShowRentDropdown(false)}
+              >
                 <li><a href="#sports-bikes">Sports Bikes</a></li>
                 <li><a href="#cruiser-bikes">Cruiser Bikes</a></li>
                 <li><a href="#scooters">Scooters</a></li>
@@ -32,7 +41,7 @@ function Navbar() {
               </ul>
             )}
           </li>
-          <li><a href="#about" className="nav-link">About Us</a></li>
+          <li><Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}>About Us</Link></li>
           <li>
             <button className="login-register-btn">
               <span className="user-icon">👤</span> Login/Register

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import ClientReviews from './components/ClientReviews';
 import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
 import BikeList from './components/BikeList';
 import PaymentPage from './components/PaymentPage';
 import SignupForm from './components/SignupForm';
@@ -43,28 +45,36 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar />
-      
-      {showAuth && !user ? (
-        <div className="auth-container">
-          <div className="auth-wrapper">
-            <button className="back-btn" onClick={() => setShowAuth(false)}>
-              ← Back to Home
-            </button>
-            <SignupForm onSignupSuccess={handleSignupSuccess} />
-            <LoginForm onLoginSuccess={handleLoginSuccess} />
-          </div>
-        </div>
-      ) : (
-        <>
-          <HeroSection />
-          <WhyChooseUs />
-          <ClientReviews />
-          <Footer />
-        </>
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={
+            showAuth && !user ? (
+              <div className="auth-container">
+                <div className="auth-wrapper">
+                  <button className="back-btn" onClick={() => setShowAuth(false)}>
+                    ← Back to Home
+                  </button>
+                  <SignupForm onSignupSuccess={handleSignupSuccess} />
+                  <LoginForm onLoginSuccess={handleLoginSuccess} />
+                </div>
+              </div>
+            ) : (
+              <>
+                <HeroSection />
+                <WhyChooseUs />
+                <ClientReviews />
+              </>
+            )
+          } />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
