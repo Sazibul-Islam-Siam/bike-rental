@@ -56,22 +56,6 @@ function App() {
       ) : (
         <>
           <HeroSection />
-          <section id="bikes" className="bikes-section">
-            <div className="section-container">
-              <div className="section-header">
-                <h2>Our Premium Fleet</h2>
-                <p>Choose from our wide selection of high-quality bikes</p>
-              </div>
-              <BikeList onBooking={handleBooking} />
-              {bookingDetails && (
-                <PaymentPage
-                  bike={bookingDetails.bike}
-                  duration={bookingDetails.duration}
-                  onPaymentSuccess={handlePaymentSuccess}
-                />
-              )}
-            </div>
-          </section>
         </>
       )}
     </div>

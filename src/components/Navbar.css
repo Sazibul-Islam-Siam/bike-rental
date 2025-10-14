@@ -1,6 +1,6 @@
 .navbar {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -8,60 +8,82 @@
 }
 
 .navbar-container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 18px 50px;
 }
 
 .navbar-logo h2 {
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 32px;
+  font-weight: 800;
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 .logo-highlight {
-  color: #ff4757;
-  font-weight: 800;
+  color: #C8102E;
+  font-weight: 900;
 }
 
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 35px;
   margin: 0;
+  margin-left: 60px;
   padding: 0;
   align-items: center;
 }
 
 .navbar-menu li {
   position: relative;
+  margin: 0;
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.95);
+  color: #2c2c2c;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
-  padding: 8px 12px;
+  padding: 8px 0;
   display: inline-block;
-  border-radius: 6px;
+  background: transparent;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #C8102E;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #ffd93d;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  color: #C8102E;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .nav-link.active {
-  color: #ffd93d;
-  background: rgba(255, 215, 61, 0.15);
+  color: #C8102E;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  width: 100%;
 }
 
 .nav-dropdown {
@@ -76,16 +98,17 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -20px;
   background: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
   list-style: none;
-  padding: 10px 0;
-  margin-top: 10px;
-  min-width: 200px;
+  padding: 15px 0;
+  margin-top: 15px;
+  min-width: 220px;
   opacity: 1;
   animation: fadeIn 0.3s ease;
+  border: 1px solid #f0f0f0;
 }
 
 .dropdown-menu li {
@@ -93,44 +116,47 @@
 }
 
 .dropdown-menu a {
-  color: #1e3c72;
+  color: #2c2c2c;
   display: block;
-  padding: 12px 20px;
+  padding: 14px 25px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-  background: #f0f4ff;
-  color: #ff4757;
-  padding-left: 25px;
+  background: #fff5f7;
+  color: #C8102E;
+  padding-left: 30px;
 }
 
 .call-now-btn {
-  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  background: #C8102E;
   color: white;
   border: none;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+  box-shadow: 0 4px 20px rgba(200, 16, 46, 0.3);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 .call-now-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
-  background: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(200, 16, 46, 0.45);
+  background: #a50d25;
 }
 
 .phone-icon {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 @keyframes fadeIn {
@@ -146,10 +172,6 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .navbar-menu {
-    gap: 20px;
-  }
-  
   .nav-link {
     font-size: 14px;
   }
@@ -158,9 +180,5 @@
 @media (max-width: 968px) {
   .navbar-container {
     padding: 15px 20px;
-  }
-  
-  .navbar-menu {
-    gap: 15px;
   }
 }
