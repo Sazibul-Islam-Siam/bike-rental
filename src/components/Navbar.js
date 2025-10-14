@@ -35,9 +35,9 @@ function Navbar() {
                 onMouseLeave={() => setShowRentDropdown(false)}
               >
                 <li><Link to="/sports-bikes" onClick={() => setShowRentDropdown(false)}>Sports Bikes</Link></li>
-                <li><a href="#cruiser-bikes">Cruiser Bikes</a></li>
-                <li><a href="#scooters">Scooters</a></li>
-                <li><a href="#electric-bikes">Electric Bikes</a></li>
+                <li><Link to="/cruiser-bikes" onClick={() => setShowRentDropdown(false)}>Cruiser Bikes</Link></li>
+                <li><Link to="/scooters" onClick={() => setShowRentDropdown(false)}>Scooters</Link></li>
+                <li><Link to="/electric-bikes" onClick={() => setShowRentDropdown(false)}>Electric Bikes</Link></li>
               </ul>
             )}
           </li>

@@ -142,21 +142,21 @@ function HeroSection() {
               ))}
             </div>
           </div>
-        </div>
-      </div>
-      
-      <div className="floating-stats">
-        <div className="stat-card">
-          <h3>500+</h3>
-          <p>Happy Customers</p>
-        </div>
-        <div className="stat-card">
-          <h3>50+</h3>
-          <p>Premium Bikes</p>
-        </div>
-        <div className="stat-card">
-          <h3>24/7</h3>
-          <p>Support Available</p>
+
+          <div className="floating-stats">
+            <div className="stat-card">
+              <h3>500+</h3>
+              <p>Happy Customers</p>
+            </div>
+            <div className="stat-card">
+              <h3>50+</h3>
+              <p>Premium Bikes</p>
+            </div>
+            <div className="stat-card">
+              <h3>24/7</h3>
+              <p>Support Available</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

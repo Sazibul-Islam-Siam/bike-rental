@@ -1,0 +1,46 @@
+/* Electric Bikes Page - Same styling as Sports Bikes */
+@import './SportsBikes.css';
+
+.electric-bikes-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.electric-hero {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #4338ca 100%);
+  color: white;
+  padding: 100px 20px 80px;
+  text-align: center;
+  position: relative;
+}
+
+.electric-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L100 50L50 100L0 50z" fill="rgba(255,255,255,0.03)"/></svg>') repeat;
+  opacity: 0.5;
+}
+
+.electric-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.electric-hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  letter-spacing: -1px;
+}
+
+.electric-hero p {
+  font-size: 22px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}

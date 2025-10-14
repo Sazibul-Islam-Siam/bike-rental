@@ -8,6 +8,9 @@ import ClientReviews from './components/ClientReviews';
 import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
 import SportsBikes from './components/SportsBikes';
+import CruiserBikes from './components/CruiserBikes';
+import Scooters from './components/Scooters';
+import ElectricBikes from './components/ElectricBikes';
 import BikeDetails from './components/BikeDetails';
 import BikeList from './components/BikeList';
 import PaymentPage from './components/PaymentPage';
@@ -74,6 +77,12 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/sports-bikes" element={<SportsBikes />} />
           <Route path="/sports-bikes/:id" element={<BikeDetails />} />
+          <Route path="/cruiser-bikes" element={<CruiserBikes />} />
+          <Route path="/cruiser-bikes/:id" element={<BikeDetails />} />
+          <Route path="/scooters" element={<Scooters />} />
+          <Route path="/scooters/:id" element={<BikeDetails />} />
+          <Route path="/electric-bikes" element={<ElectricBikes />} />
+          <Route path="/electric-bikes/:id" element={<BikeDetails />} />
         </Routes>
         
         <Footer />

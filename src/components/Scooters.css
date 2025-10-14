@@ -1,0 +1,46 @@
+/* Scooters Page - Same styling as Sports Bikes */
+@import './SportsBikes.css';
+
+.scooters-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.scooters-hero {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  color: white;
+  padding: 100px 20px 80px;
+  text-align: center;
+  position: relative;
+}
+
+.scooters-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L100 50L50 100L0 50z" fill="rgba(255,255,255,0.03)"/></svg>') repeat;
+  opacity: 0.5;
+}
+
+.scooters-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.scooters-hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  letter-spacing: -1px;
+}
+
+.scooters-hero p {
+  font-size: 22px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
